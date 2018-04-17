@@ -66,7 +66,7 @@ $(document).ready(function(){
 		var produitPoint = (reference.points)/(reference.pixels);
 		var tableauPxDefaut = [];
 		var depart = (reference.pixels)-7;
-		//var pxParDefaut = reference.pixels;
+		var pxParDefaut = reference.pixels;
 		
 //		console.log("produitEm : "+ produitEm);
 //		console.log("produitPourcent : "+ produitPourcent);
@@ -136,6 +136,7 @@ $(document).ready(function(){
 		tableauHTMLPxDefaut.setAttribute("id", "tableauPxDefaut");
 		tableauHTMLPxDefaut.setAttribute("class", "table");
 		affichageTableauPxDefaut.appendChild(tableauHTMLPxDefaut);
+		
 		
 		//Créer ma première rangée
 		var trPrincipal = document.createElement("TR");
@@ -230,6 +231,12 @@ $(document).ready(function(){
 		var refU1 = 0;
 		var refU2 = 0;
 		var defaultPx = document.getElementById("defaultpx").value;
+		
+		if(defaultPx<1){
+			
+			defaultPx = 1;
+		}
+		
 		
 		valeur1 = document.getElementById("valeur1").value;
 		var optionSelectU1 = document.getElementById("unite1");
@@ -367,12 +374,13 @@ $(document).ready(function(){
 	//Source: https://www.qodo.co.uk/blog/javascript-restrict-keyboard-character-input/
 
 	function restrictCharacters(e) {
+		
 		var code = e.which;
 		var touche = String.fromCharCode(code);
 		var integerOnly = /[0-9]/g;
 		
 
-		//console.log("Mon charCode est = " + code);
+		console.log("Mon charCode est = " + code);
 		// ignore if they are press other keys
 		// strange because code: 39 is the down key AND ' key...
 		// and DEL also equals .
@@ -407,10 +415,8 @@ $(document).ready(function(){
 	//LIMITE PX PAR DÉFAUT
 	
 	function limitePxDefaut(){
-		
-	
-		
-		if (inputDefaultPx.value.length>=5){
+				
+		if (inputDefaultPx.value.length>=4){
 			
 			msgLimite.className= "msgErreur";
 			//console.log("le nombre est trop grand");
@@ -443,7 +449,21 @@ $(document).ready(function(){
 		limitePxDefaut();
 		afficherConv();
 		creerTableau();
-
+		
+	});
+	
+	inputDefaultPx.addEventListener("keypress", function(){
+		
+		console.log("keypress");
+		
+		console.log(longeurPxDefaut);
+		
+		if(longeurPxDefaut===false){
+			
+			event.preventDefault();
+			
+		}
+		
 		
 	});
 	

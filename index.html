@@ -111,12 +111,12 @@
 			
 			<div class="col-6">
 				
-				<form action="" method="get" id="convertisseur" name="convertisseur">
+				<form action="" method="get" id="convertisseur" name="convertisseur" novalidate>
 					
 					<div class="row">
 						<div class="col-12 bg-info valeurdefaut">
-							<label for="defaultpx">Taille par défaut (px) :</label>
-							<input type="number" name="defaultpx" id="defaultpx" min="1" max="999" step="1" value="16" onkeypress="return restrictCharacters(event);"><span class="regulier" id="msgerreur">*Nombres entiers seulement</span><span class="regulier" id="limite">*Entrez une valeur plus petite</span>
+							<label for="defaultpx">Taille par défaut (px) :</label><br>
+							<input type="number" name="defaultpx" id="defaultpx" min="1" max="999" step="1" value="16" pattern="[0-9]"><span class="regulier" id="msgerreur">*Nombres entiers seulement</span><span class="regulier" id="limite">*Entrez une valeur plus petite</span>
 						</div>
 						<div class="col-5 valeur1">
 							<h4>Votre valeur</h4>
@@ -128,8 +128,8 @@
 								<option value="3">pts</option>
 							</select>
 						</div>
-						<div class="col-2">
-							bla
+						<div class="col-2 d-flex justify-content-center align-items-center bg-success">
+							<i class="fas fa-exchange-alt fa-3x"></i>
 						</div>
 						<div class="col-5 valeur2">
 							<h4>Conversion</h4>
