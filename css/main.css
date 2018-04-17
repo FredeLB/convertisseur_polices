@@ -108,6 +108,16 @@ body {
 
 
 
+/*
+form .row > div {
+	
+	border: 1px solid aqua;
+	height: 25vh;
+}
+*/
+
+
+
 /*--Pour les vieux messages d'erreur--*/
 
 div.valeurdefaut span {

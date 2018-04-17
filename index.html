@@ -109,18 +109,18 @@
 		
 		<div class="row">
 			
-			<div class="col-6">
+			<div class="col-6 d-flex align-items-center">
 				
 				<form action="" method="get" id="convertisseur" name="convertisseur" novalidate>
 					
 					<div class="row">
 						<div class="col-12 bg-info valeurdefaut">
 							<label for="defaultpx">Taille par défaut (px) :</label><br>
-							<input type="number" name="defaultpx" id="defaultpx" min="1" max="999" step="1" value="16" pattern="[0-9]"><span class="regulier" id="msgerreur">*Nombres entiers seulement</span><span class="regulier" id="limite">*Entrez une valeur plus petite</span>
+							<input class="form-control" type="number" name="defaultpx" id="defaultpx" min="1" max="999" step="1" value="16" pattern="[0-9]"><span class="regulier" id="msgerreur">*Nombres entiers seulement</span><span class="regulier" id="limite">*Entrez une valeur plus petite</span>
 						</div>
 						<div class="col-5 valeur1">
 							<h4>Votre valeur</h4>
-							<input type="number" name="valeur1" id="valeur1" min="0" step="1" value="16">
+							<input class="form-control" type="number" name="valeur1" id="valeur1" min="0" step="1" value="16">
 							<select class="form-control" name="unite1" id="unite1" size="4">
 								<option value="0" selected>px</option>
 								<option value="1">em</option>
