@@ -1,0 +1,175 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr"> <!--<![endif]-->
+    <head>
+		<meta charset="utf-8">
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+		<title>Convertisseur de tailles de police</title>
+		
+		<meta name="description" content="">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+		
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+
+   		<!--Fontes-->
+   		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gafata">
+   		
+   		<!--Fontes icones-->
+   		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>   		
+   		
+	   	<!-- <link rel="stylesheet" href="css/bootstrap.min.css">-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+
+
+    </head>
+    <body class="text-center d-flex align-items-center">
+       
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">Vous utilisez une version de navigateur <strong>désuète</strong>. S'il-vous-plait, <a href="http://browsehappy.com/">mettez à jour votre navigateur</a> pour améliorer votre expérience.</p>
+        <![endif]-->
+        
+  
+  
+  
+  <!-------------------------------HTML------------------------------------->
+
+<!--
+<div id="wrapper">
+
+<header>
+	<h1>Convertisseur</h1>
+	
+</header>
+
+<main id="sectionAffichage">
+
+	<form action="" method="get" id="convertisseur" name="convertisseur">
+
+		<div class="valeurdefaut">
+			<p><label for="defaultpx">Taille par défaut (px) :</label></p>
+			<p><input type="number" name="defaultpx" id="defaultpx" min="0" max="999" step="1" value="16" onkeypress="return restrictCharacters(event);"><span class="regulier" id="msgerreur">*Nombres entiers seulement</span><span class="regulier" id="limite">*Entrez une valeur plus petite</span></p>
+			
+		</div>
+		
+		<div class="valeur1">
+			<p>Votre valeur</p>
+			<p><input type="number" name="valeur1" id="valeur1" min="0" step="1" value="16"></p>	
+			<p>
+			<select name="unite1" id="unite1" size="4">
+				<option value="0" selected>px</option>
+				<option value="1">em</option>
+				<option value="2">%</option>
+				<option value="3">pts</option>
+			</select>
+		</p>
+		</div>
+		<div class="symbole"></div>
+		<div class="valeur2">
+			<p>Conversion</p>
+			<p id="valeur2" class="regulier"></p><span class="regulier" id="asterixValeur">* Valeur<br>trop élevée</span>
+			<p>
+			<select name="unite2" id="unite2" size="4">
+				<option value="0">px</option>
+				<option value="1" selected>em</option>
+				<option value="2">%</option>
+				<option value="3">pts</option>
+			</select>
+		</p>
+			
+		</div>
+	
+	</form>
+	
+	<div id="sectionTableau">
+		<h2>Aperçu des valeurs</h2>
+		
+		<div id="affichagePxDefaut">
+		</div>
+	</div>
+
+</main>
+
+</div>	
+-->
+		
+	<div class="container bg-dark text-light">
+		
+		<div class="row">
+			
+			<div class="col-6">
+				
+				<form action="" method="get" id="convertisseur" name="convertisseur">
+					
+					<div class="row">
+						<div class="col-12 bg-info valeurdefaut">
+							<label for="defaultpx">Taille par défaut (px) :</label>
+							<input type="number" name="defaultpx" id="defaultpx" min="0" max="999" step="1" value="16" onkeypress="return restrictCharacters(event);"><span class="regulier" id="msgerreur">*Nombres entiers seulement</span><span class="regulier" id="limite">*Entrez une valeur plus petite</span>
+						</div>
+						<div class="col-5 valeur1">
+							<h4>Votre valeur</h4>
+							<input type="number" name="valeur1" id="valeur1" min="0" step="1" value="16">
+							<select class="form-control" name="unite1" id="unite1" size="4">
+								<option value="0" selected>px</option>
+								<option value="1">em</option>
+								<option value="2">%</option>
+								<option value="3">pts</option>
+							</select>
+						</div>
+						<div class="col-2">
+							bla
+						</div>
+						<div class="col-5 valeur2">
+							<h4>Conversion</h4>
+							<p id="valeur2" class="regulier"></p><span class="regulier" id="asterixValeur">* Valeur<br>trop élevée</span>
+							<select class="form-control" name="unite2" id="unite2" size="4">
+								<option value="0">px</option>
+								<option value="1" selected>em</option>
+								<option value="2">%</option>
+								<option value="3">pts</option>
+							</select>
+						</div>
+					</div>
+				</form>
+			</div>	
+			
+			<div id="sectionTableau" class="col-6 bg-warning">
+				<h2>Aperçu des valeurs</h2>
+				<div id="affichagePxDefaut">
+				</div>
+			</div>	
+			
+		</div>
+		
+	</div>	
+		
+		
+		
+		
+	
+		
+      
+      
+  <!----------------------------------------------------SCRIPTS------------------------------------------->
+      
+		<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+       	<script src="js/vendor/jquery-3.3.1.min.js"></script>
+
+                
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
