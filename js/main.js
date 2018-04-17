@@ -82,7 +82,7 @@ $(document).ready(function(){
 			depart = depart;
 		}
 		
-		console.log("depart : "+ depart);
+		//console.log("depart : "+ depart);
 		
 		
 		for( i=depart; i<depart+15; i+=1){
@@ -134,6 +134,7 @@ $(document).ready(function(){
 		//Créer mon tableau
 		var tableauHTMLPxDefaut = document.createElement("TABLE");
 		tableauHTMLPxDefaut.setAttribute("id", "tableauPxDefaut");
+		tableauHTMLPxDefaut.setAttribute("class", "table");
 		affichageTableauPxDefaut.appendChild(tableauHTMLPxDefaut);
 		
 		//Créer ma première rangée
@@ -204,7 +205,7 @@ $(document).ready(function(){
 			
 			if(tableauPxDefaut[i].pixels == reference.pixels){
 				
-				trHTML.setAttribute("class", "rangeeTailleDefaut");
+				trHTML.setAttribute("class", "table-dark");
 				
 			}
 			

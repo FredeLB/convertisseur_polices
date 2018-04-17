@@ -32,7 +32,7 @@
 
 
     </head>
-    <body class="text-center d-flex align-items-center">
+    <body class="text-center d-flex flex-column align-items-center">
        
         <!--[if lt IE 8]>
             <p class="browserupgrade">Vous utilisez une version de navigateur <strong>désuète</strong>. S'il-vous-plait, <a href="http://browsehappy.com/">mettez à jour votre navigateur</a> pour améliorer votre expérience.</p>
@@ -102,6 +102,9 @@
 </div>	
 -->
 		
+	
+	<h1>Convertisseur de tailles de police</h1>
+		
 	<div class="container bg-dark text-light">
 		
 		<div class="row">
@@ -113,7 +116,7 @@
 					<div class="row">
 						<div class="col-12 bg-info valeurdefaut">
 							<label for="defaultpx">Taille par défaut (px) :</label>
-							<input type="number" name="defaultpx" id="defaultpx" min="0" max="999" step="1" value="16" onkeypress="return restrictCharacters(event);"><span class="regulier" id="msgerreur">*Nombres entiers seulement</span><span class="regulier" id="limite">*Entrez une valeur plus petite</span>
+							<input type="number" name="defaultpx" id="defaultpx" min="1" max="999" step="1" value="16" onkeypress="return restrictCharacters(event);"><span class="regulier" id="msgerreur">*Nombres entiers seulement</span><span class="regulier" id="limite">*Entrez une valeur plus petite</span>
 						</div>
 						<div class="col-5 valeur1">
 							<h4>Votre valeur</h4>
@@ -142,8 +145,8 @@
 				</form>
 			</div>	
 			
-			<div id="sectionTableau" class="col-6 bg-warning">
-				<h2>Aperçu des valeurs</h2>
+			<div id="sectionTableau" class="col-6">
+				<h2 class="p-3">Aperçu des valeurs</h2>
 				<div id="affichagePxDefaut">
 				</div>
 			</div>	
