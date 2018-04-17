@@ -137,32 +137,45 @@ $(document).ready(function(){
 		tableauHTMLPxDefaut.setAttribute("class", "table");
 		affichageTableauPxDefaut.appendChild(tableauHTMLPxDefaut);
 		
+		//Créer mon thead
+		var tHead = document.createElement("THEAD");
+		tHead.setAttribute("id", "theadtable");
+		tHead.setAttribute("class", "thead thead-light");
+		tableauHTMLPxDefaut.appendChild(tHead);
+		
+		
+		//Créer mon tbody
+		var tBody = document.createElement("TBODY");
+		tBody.setAttribute("id", "tbodytable");
+		tBody.setAttribute("class", "tbody");
+		tableauHTMLPxDefaut.appendChild(tBody);
+		
 		
 		//Créer ma première rangée
-		var trPrincipal = document.createElement("TR");
-		trPrincipal.setAttribute("id", "rangeeprincipale");
-		tableauHTMLPxDefaut.appendChild(trPrincipal);
+		var trHead = document.createElement("TR");
+		trHead.setAttribute("id", "rangeeprincipale");
+		tHead.appendChild(trHead);
 		
 		//Créer mes titres de colonnes
 		var th01 = document.createElement("TH");
 		var textTH01 = document.createTextNode("Pixels");
 		th01.appendChild(textTH01);
-		trPrincipal.appendChild(th01);
+		trHead.appendChild(th01);
 		
 		var th02 = document.createElement("TH");
 		var textTH02 = document.createTextNode("EMs");
 		th02.appendChild(textTH02);
-		trPrincipal.appendChild(th02);
+		trHead.appendChild(th02);
 		
 		var th03 = document.createElement("TH");
 		var textTH03 = document.createTextNode("Pourcentage");
 		th03.appendChild(textTH03);
-		trPrincipal.appendChild(th03);
+		trHead.appendChild(th03);
 		
 		var th04 = document.createElement("TH");
 		var textTH04 = document.createTextNode("Points");
 		th04.appendChild(textTH04);
-		trPrincipal.appendChild(th04);
+		trHead.appendChild(th04);
 		
 			
 		for(var i=0; i<15; i+=1){
@@ -172,7 +185,7 @@ $(document).ready(function(){
 			var trHTML = document.createElement("TR");
 			var idRangee = "rangee"+ (i+1);
 			trHTML.setAttribute("id", idRangee);
-			tableauHTMLPxDefaut.appendChild(trHTML);
+			tBody.appendChild(trHTML);
 			
 			
 			//Créer la colonne des pixels
