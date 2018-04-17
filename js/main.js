@@ -66,11 +66,11 @@ $(document).ready(function(){
 		var produitPoint = (reference.points)/(reference.pixels);
 		var tableauPxDefaut = [];
 		var depart = (reference.pixels)-7;
-		var pxParDefaut = reference.pixels;
+		//var pxParDefaut = reference.pixels;
 		
-		console.log("produitEm : "+ produitEm);
-		console.log("produitPourcent : "+ produitPourcent);
-		console.log("produitPoint : "+ produitPoint);
+//		console.log("produitEm : "+ produitEm);
+//		console.log("produitPourcent : "+ produitPourcent);
+//		console.log("produitPoint : "+ produitPoint);
 		
 		//Éliminer les valeurs négatives
 		if(depart<=0){
@@ -119,7 +119,7 @@ $(document).ready(function(){
 			
 		}
 		
-	console.log(tableauPxDefaut);
+	//console.log(tableauPxDefaut);
 		
 		//CRÉATION DU TABLEAU HTML DE A a Z
 		
@@ -182,23 +182,23 @@ $(document).ready(function(){
 			
 			
 			//Créer la colonne des ems
-			var tdHTML = document.createElement("TD");
-			var texteTd = document.createTextNode(tableauPxDefaut[i].ems);
+			tdHTML = document.createElement("TD");
+			texteTd = document.createTextNode(tableauPxDefaut[i].ems);
 			tdHTML.appendChild(texteTd);
 			document.getElementById(idRangee).appendChild(tdHTML);		
 			
 			
 			//Créer la colonne des pourcent
-			var tdHTML = document.createElement("TD");
-			var texteTd = document.createTextNode(tableauPxDefaut[i].pourcentage);
+			tdHTML = document.createElement("TD");
+			texteTd = document.createTextNode(tableauPxDefaut[i].pourcentage);
 			tdHTML.appendChild(texteTd);
 			document.getElementById(idRangee).appendChild(tdHTML);		
 			
 			
 			
 			//Créer la colonne des points
-			var tdHTML = document.createElement("TD");
-			var texteTd = document.createTextNode(tableauPxDefaut[i].points);
+			tdHTML = document.createElement("TD");
+			texteTd = document.createTextNode(tableauPxDefaut[i].points);
 			tdHTML.appendChild(texteTd);
 			document.getElementById(idRangee).appendChild(tdHTML);	
 			
@@ -206,7 +206,7 @@ $(document).ready(function(){
 				
 				trHTML.setAttribute("class", "rangeeTailleDefaut");
 				
-			}3
+			}
 			
 		}
 		
@@ -237,17 +237,17 @@ $(document).ready(function(){
 		unite1 = optionSelectU1.options[optionSelectU1.selectedIndex].text;
 		unite2 = optionSelectU2.options[optionSelectU2.selectedIndex].text;
 		
-		console.log("valeur1: " + valeur1);
-		console.log("unite1: " + unite1);
-		console.log("unite2: " + unite2);
-		console.log("Px par défaut: " + defaultPx);
+//		console.log("valeur1: " + valeur1);
+//		console.log("unite1: " + unite1);
+//		console.log("unite2: " + unite2);
+//		console.log("Px par défaut: " + defaultPx);
 		
 		//Appliquer la police par défaut
 		
 		reference.pixels = defaultPx;
 		reference.points = tableauApercu[defaultPx].points;
 		
-		console.log(reference);
+	//	console.log(reference);
 		
 		
 		//Trouver la référence pour la première unité
@@ -291,14 +291,14 @@ $(document).ready(function(){
 		}
 		
 		
-		console.log("refU1 : " + refU1);
-		console.log("refU2 : " + refU2);
+//		console.log("refU1 : " + refU1);
+//		console.log("refU2 : " + refU2);
 		
 		
 		//CONVERTISSEUR BABY
 		
 		valeur2 = valeur1*refU2/refU1;
-		console.log("valeur2 : " + valeur2);
+		//console.log("valeur2 : " + valeur2);
 		
 		
 		//Arrondir mes valeurs
@@ -339,7 +339,7 @@ $(document).ready(function(){
 		
 		var longueur = valeurConvertie.length; 
 		
-		console.log("La longueur de ma valeur convertie est " + longueur);
+		//console.log("La longueur de ma valeur convertie est " + longueur);
 		
 		if(longueur>12){
 			
@@ -371,7 +371,7 @@ $(document).ready(function(){
 		var integerOnly = /[0-9]/g;
 		
 
-		console.log("Mon charCode est = " + code);
+		//console.log("Mon charCode est = " + code);
 		// ignore if they are press other keys
 		// strange because code: 39 is the down key AND ' key...
 		// and DEL also equals .
@@ -412,12 +412,12 @@ $(document).ready(function(){
 		if (inputDefaultPx.value.length>=5){
 			
 			msgLimite.className= "msgErreur";
-			console.log("le nombre est trop grand");
+			//console.log("le nombre est trop grand");
 			longeurPxDefaut = false;
 			
 		}else{
 			msgLimite.className= "regulier";
-			console.log("C'Est chiiiill");
+			//console.log("C'Est chiiiill");
 			longeurPxDefaut = true;
 		}
 			
