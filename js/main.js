@@ -465,7 +465,7 @@ $(document).ready(function(){
 		
 	});
 	
-	inputDefaultPx.addEventListener("keypress", function(){
+	inputDefaultPx.addEventListener("keypress", function(event){
 		
 		console.log("keypress");
 		
