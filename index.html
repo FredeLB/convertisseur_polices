@@ -32,7 +32,7 @@
 
 
     </head>
-    <body class="text-center d-flex flex-column align-items-center">
+    <body class="text-center d-flex flex-column align-items-center justify-content-center">
        
         <!--[if lt IE 8]>
             <p class="browserupgrade">Vous utilisez une version de navigateur <strong>désuète</strong>. S'il-vous-plait, <a href="http://browsehappy.com/">mettez à jour votre navigateur</a> pour améliorer votre expérience.</p>
@@ -102,23 +102,22 @@
 </div>	
 -->
 		
-	
-	<h1>Convertisseur de tailles de police</h1>
+	<h1 class="text-light">Convertisseur de tailles de police</h1>	
 		
-	<div class="container bg-dark text-light">
+	<div class="container">
 		
 		<div class="row">
 			
-			<div class="col-6 d-flex align-items-center">
+			<div class="col-12 col-lg-6 d-flex align-items-center bg-light rounded-left">
 				
 				<form action="" method="get" id="convertisseur" name="convertisseur" novalidate>
 					
 					<div class="row">
-						<div class="col-12 bg-info valeurdefaut">
+						<div class="col-12 valeurdefaut p-5 border-bottom">
 							<label for="defaultpx">Taille par défaut (px) :</label><br>
 							<input class="form-control" type="number" name="defaultpx" id="defaultpx" min="1" max="999" step="1" value="16" pattern="[0-9]"><span class="regulier" id="msgerreur">*Nombres entiers seulement</span><span class="regulier" id="limite">*Entrez une valeur plus petite</span>
 						</div>
-						<div class="col-5 valeur1">
+						<div class="col-12 col-md-5 valeur1 p-5">
 							<h4>Votre valeur</h4>
 							<input class="form-control" type="number" name="valeur1" id="valeur1" min="0" step="1" value="16">
 							<select class="form-control" name="unite1" id="unite1" size="4">
@@ -128,12 +127,15 @@
 								<option value="3">pts</option>
 							</select>
 						</div>
-						<div class="col-2 d-flex justify-content-center align-items-center bg-success">
-							<i class="fas fa-exchange-alt fa-3x"></i>
+						<div class="col-12 col-md-2 d-flex justify-content-center align-items-center">
+							<i class="fas fa-exchange-alt fa-3x d-none d-md-block"></i>
+							<i class="fas fa-angle-double-down fa-3x d-block d-md-none"></i>
 						</div>
-						<div class="col-5 valeur2">
+						<div class="col-12 col-md-5 valeur2 p-5">
 							<h4>Conversion</h4>
-							<p id="valeur2" class="regulier"></p><span class="regulier" id="asterixValeur">* Valeur<br>trop élevée</span>
+							<p id="valeur2" class="regulier"></p>
+<!--							<input class="form-control" type="text" placeholder="" readonly>-->
+							<span class="regulier" id="asterixValeur">* Valeur<br>trop élevée</span>
 							<select class="form-control" name="unite2" id="unite2" size="4">
 								<option value="0">px</option>
 								<option value="1" selected>em</option>
@@ -145,7 +147,7 @@
 				</form>
 			</div>	
 			
-			<div id="sectionTableau" class="col-6">
+			<div id="sectionTableau" class="col-12 col-lg-6 bg-dark rounded-right text-light">
 				<h2 class="p-3">Aperçu des valeurs</h2>
 				<div id="affichagePxDefaut">
 				</div>

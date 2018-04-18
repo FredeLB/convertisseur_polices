@@ -99,22 +99,17 @@ textarea {
 
 body {
 	
-	background: url(../img/letters-691842_1920.jpg) no-repeat;
+	background: linear-gradient(rgba(0,0,0,1.00), rgba(255,255,255,0.00)), url(../img/letters-691842_1920.jpg) no-repeat;
 	background-size: cover;
 	height: auto;
 	min-height: 100vh;
 	width: 100vw; 
 }
 
-
-
-/*
 form .row > div {
-	
-	border: 1px solid aqua;
-	height: 25vh;
+
 }
-*/
+
 
 
 

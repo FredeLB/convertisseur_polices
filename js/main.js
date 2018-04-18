@@ -134,7 +134,7 @@ $(document).ready(function(){
 		//Créer mon tableau
 		var tableauHTMLPxDefaut = document.createElement("TABLE");
 		tableauHTMLPxDefaut.setAttribute("id", "tableauPxDefaut");
-		tableauHTMLPxDefaut.setAttribute("class", "table");
+		tableauHTMLPxDefaut.setAttribute("class", "table table-sm");
 		affichageTableauPxDefaut.appendChild(tableauHTMLPxDefaut);
 		
 		//Créer mon thead
