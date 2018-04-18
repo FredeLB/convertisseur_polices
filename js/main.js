@@ -6,7 +6,7 @@ $(document).ready(function(){
 	var tableauApercu = [];
 	var formConv = document.getElementById("convertisseur");
 	var reference = {};
-	var outputV2 = document.getElementById("valeur2");
+	var $outputV2 = $("#valeur2");
 	var inputDefaultPx = document.getElementById("defaultpx");
 	var msgErreur = document.getElementById("msgerreur");
 	var msgLimite = document.getElementById("limite");
@@ -364,15 +364,15 @@ $(document).ready(function(){
 		
 		if(longueur>12){
 			
-			outputV2.className = "msgErreur";
+			$outputV2.addClass("bg-danger");
 			asterix.className = "msgErreur";
-			outputV2.innerHTML = " --- ";
+			$outputV2.attr("placeholder", " --- ");
 			
 		}else{
 			
-			outputV2.className = "regulier";
+			$outputV2.removeClass("bg-danger");
 			asterix.className = "regulier";
-			outputV2.innerHTML = valeurConvertie;
+			$outputV2.attr("placeholder", valeurConvertie);
 			
 		}
 		
