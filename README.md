@@ -4,4 +4,6 @@ Projet réalisé dans le cadre de l'AEC Production en médias interactifs du Cé
 
 Convertisseur de tailles de polices (pixels, ems, pourcentage et pts) et tableau dynamique d'aperçu des différentes valeurs équivalentes en fonction du nomde de pixels par défaut.
 
+*Pas encore 100% responsive
+
 La démo est disponible [ici](https://fredelb.github.io/convertisseur_polices/).
